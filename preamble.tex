@@ -1,0 +1,54 @@
+\usepackage[utf8]{inputenc}
+\usepackage[USenglish]{babel}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{authblk}
+
+\usepackage[a4paper,margin=2cm]{geometry}% A4 for a US project?
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\emph{Sustainable Matrix Element Method through Deep Learing}}
+\chead{}
+\rhead{HSF-CWP-018}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{1.0pt}
+
+\title{Sustainable Matrix Element Method through Deep Learning \\ 
+\vspace{2mm} 
+\large HSF-CWP-018 \\
+}
+
+\author[1]{Mark S. Neubauer}
+\affil[1]{Department of Physics, University of Illinois at Urbana-Champaign}
+
+\renewcommand\Authands{ and }
+
+%\usepackage[a4paper,margin=2cm]{geometry}% A4 for a US project?
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,       % false: boxed links; true: colored links
+  linkcolor=black,          % color of internal links
+  citecolor=green,        % color of links to bibliography
+  filecolor=magenta,      % color of file links
+  urlcolor=blue           % color of external links
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{amsmath}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\providecommand{\xmark}{\ding{55}}% https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
+
+% https://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib
+\usepackage[backend=biber,defernumbers=true,sorting=none,firstinits=true,natbib=true,style=numeric-comp]{biblatex}
+
+% avoid printing "In: " with no journal to follow, for arxiv-only papers
+\renewbibmacro{in:}{}
+\addbibresource{bib/references.bib}

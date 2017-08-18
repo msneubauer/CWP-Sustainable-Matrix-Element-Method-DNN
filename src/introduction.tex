@@ -1,0 +1,19 @@
+The Matrix Element (ME) Method~\cite{Kondo:1988yd,Fiedler:2010sg,2011arXiv1101.2259V,Elahi:2017ppe} is a powerful technique which can be utilzed for measurements of physical model parameters and direct searches for new phenomena. It has been used extensively by collider experiments at the Tevatron for SM measurements and Higgs boson searches~\cite{Abazov:2004cs,Abulencia:2006ry,Aaltonen:2008mv,Aaltonen:2010cm,Abazov:2009ii,Aaltonen:2009jj} and at the LHC for measurements in the Higgs and top quark sectors of the SM~\cite{Chatrchyan:2012xdj,Chatrchyan:2013mxa,Aad:2014eva,Khachatryan:2015tzo, Khachatryan:2015ila,Aad:2015gra,Aad:2015upn}. The ME method is based on \emph{ab initio} calculation of the probabilty density function $\mathcal{P}$ of an event with observed final-state particle momenta ${\bf x}$ to be due to a physics process $\xi$ with theory parameters $\boldsymbol\alpha$. One can compute $\mathcal{P}_{\xi}({\bf x}|{\boldsymbol\alpha})$ by means of the factorization theorem from the corresponding partonic cross-sections of the hard scattering process involving parton momenta ${\bf y}$ and is given by
+\begin{equation}
+\mathcal{P}_{\xi}({\bf x}|{\boldsymbol\alpha}) = \frac{1}{\sigma^{\rm fiducial}_{\xi}(\boldsymbol\alpha)} \int d\Phi ({\bf y}_{\rm final}) \; dx_1 \; dx_2~\frac{f(x_1)f(x_2)}{2s x_1 x_2} \; |\mathcal{M}_{\xi}({\bf y}|\boldsymbol\alpha)|^2 \; \delta^{4}({\bf y}_{\rm initial}-{\bf y}_{\rm final}) \; W({\bf x}, {\bf y})
+\label{eqn:MEProb}
+\end{equation}
+where and $x_i$ and ${\bf y}_{{\rm initial}}$ are related by $y_{{\rm initial},i}\equiv \frac{\sqrt{s}}{2}(x_i,0,0,\pm x_i)$, $f(x_i)$ are the parton distribution functions, $\sqrt{s}$ is the collider center-of-mass energy, $\sigma^{\rm fiducial}_{\xi}(\boldsymbol\alpha)$ is the total cross section for the process $\xi$ (with $\boldsymbol\alpha$) times the detector acceptance, $d\Phi({\bf y})$ is the phase space density factor, $\mathcal{M}_{\xi}({\bf y}|\boldsymbol\alpha)$ is the matrix element (typically at leading-order (LO)), and $W({\bf x}, {\bf y})$ is the probability density (aka "transfer function") that a selected event ${\bf y}$ ends up as a measured event ${\bf x}$. 
+
+One can use calculations of Eqn.~\ref{eqn:MEProb} in a number of ways to search for new phenomena at particle colliders. For measurement of model parameters $\boldsymbol\alpha$, one would maximize the likelihood function for observed events $\mathcal{L}(\boldsymbol\alpha)$ given by
+\begin{equation}
+\mathcal{L}(\boldsymbol\alpha) = \prod_{i} \sum_{k} f_k \mathcal{P}_{\xi_k}({\bf x}_i|{\boldsymbol\alpha})
+\label{eqn:LH}
+\end{equation}
+where $f_k$ are the fractions of (non-interfering) processes contributing to the data. For new particle searchres, one can (using Bayes' Theorem~\cite{Bayes01011763}) compute for a hypthosized signal $S$ the probability $P(S|{\bf x})$ given by
+\begin{equation}
+P(S|{\bf x}) = \frac{\sum_{i} \beta_{S_i} \mathcal{P}_{S_i}({\bf x}|\boldsymbol\alpha_{S_i}) }{\sum_{i} \beta_{S_i} \mathcal{P}({\bf x}|\boldsymbol\alpha_{S_i}) + \sum_{j} \beta_{B_j} \mathcal{P}({\bf x}|\boldsymbol\alpha_{B_j})}
+\label{eqn:LR}
+\end{equation}
+where, $S_i$ and $B_j$, denote all signal and background processes relevant to the considered phase space and $\beta$ are the \emph{a priori} expected process fractions. According to the Neyman-Pearson Lemma~\cite{Neyman289}, Eqn.~\ref{eqn:LR} is the optimal discriminant function for $S$ in the presence of $B$ and can be used to extract a signal fraction in the data.
+
