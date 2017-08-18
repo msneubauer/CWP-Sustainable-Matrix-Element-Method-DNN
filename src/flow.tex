@@ -1,4 +1,23 @@
-
-The overall strategy is to do the expensive full ME calculations as infrequently as possible, ideally once for DNN training and once more for a final pass before publication, with the DNNs utilized as a good approximation in between. A future analysis flow using the ME method with DNNs might look something like the following: One performs a large number of ME calculations using a traditional numerical integration technique like {\sf VEGAS} or {\sf FOAM} on a large CPU resource like an HPC, Cloud or the Grid, ideally exploiting acceleration on many-core devices like GPUs or even FPGAs. The DNN training data is generated from the phase space sampling in performing the full integration in this initial pass, and DNNs are trained either \emph{in situ} or \emph{a posteriori}. The accuracy of the DDN-based ME calculation can be assessed through this procedure. As the analysis develops and progresses through selection and/or sample changes, systematic treatment, etc., the DNN-based ME calculations are used in place of the time-consuming, full ME calculations to make the analysis nimble and to preserve the ME calculations. Before a result using the ME method is published, a final pass using full ME calculation would likely be performed both to maximize the numerical precision or sensitivity of the results and to validate the analysis evolution via the DNN-based approximations.
+The overall strategy is to do the expensive full ME calculations as
+infrequently as possible, ideally once for DNN training and once more
+for a final pass before publication, with the DNNs utilized as a good
+approximation in between. A future analysis flow using the ME method
+with DNNs might look something like the following: One performs a
+large number of ME calculations using a traditional numerical
+integration technique like {\sf VEGAS} or {\sf FOAM} on a large CPU
+resource like an HPC, Cloud or the Grid, ideally exploiting
+acceleration on many-core devices like GPUs or even FPGAs. The DNN
+training data is generated from the phase space sampling in performing
+the full integration in this initial pass, and DNNs are trained
+either \emph{in situ} or \emph{a posteriori}. The accuracy of the
+DDN-based ME calculation can be assessed through this procedure. As
+the analysis develops and progresses through selection and/or sample
+changes, systematic treatment, etc., the DNN-based ME calculations are
+used in place of the time-consuming, full ME calculations to make the
+analysis nimble and to preserve the ME calculations. Before a result
+using the ME method is published, a final pass using full ME
+calculation would likely be performed both to maximize the numerical
+precision or sensitivity of the results and to validate the analysis
+evolution via the DNN-based approximations.
 
 

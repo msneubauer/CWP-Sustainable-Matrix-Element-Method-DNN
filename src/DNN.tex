@@ -1,4 +1,34 @@
-Despite the attractive features of the ME method and promise of further optimization and parallelization of the evaluation of Eqn.~\ref{eqn:MEProb}, the computational burden of the ME technique will continue to limit is range of applicability for practical data analysis without new and innovative approaches. This is especially true when one considers the process of producing a physics publication which involves many selection, sample and systematic iterations for which ME calculations are required. The primary idea put forward in this Section is to utilize modern \emph{machine learning techniques to dramatically speed up the numerical evaluation of Eqn.~\ref{eqn:MEProb}} and therefore broaden the applicability of the ME method to the benefit of the HL-LHC physics program.
+Despite the attractive features of the ME method and promise of
+further optimization and parallelization of the evaluation of
+Eqn.~\ref{eqn:MEProb}, the computational burden of the ME technique
+will continue to limit is range of applicability for practical data
+analysis without new and innovative approaches. This is especially
+true when one considers the process of producing a physics publication
+which involves many selection, sample and systematic iterations for
+which ME calculations are required. The primary idea put forward in
+this Section is to utilize modern \emph{machine learning techniques to
+dramatically speed up the numerical evaluation of
+Eqn.~\ref{eqn:MEProb}} and therefore broaden the applicability of the
+ME method to the benefit of the HL-LHC physics program.
 
-Applying neural networks to numerical integration problems is plausible but not new (see~\cite{CSEarticle2006,TICNC4344207,IJMC2013}, for example). The technical challenge is to design a network which is sufficiently rich to encode the complexity of the ME calculation for a given process over the phase space relevant to the signal process. Deep Neural Networks (DNNs) are stong candidates for networks with sufficient complexity to achieve good approximation of Eqn.~\ref{eqn:MEProb}, possibly in conjunction with smart phase-space mapping such as described in~\cite{Artoisenet:2010cn}. Promising demonstration of the power of Boosted Decision Trees~\cite{friedman2000,friedman2001} and Generative Adversarial Neural Networks~\cite{GAN2014arXiv1406.2661G} for improved Monte Carlo integration can be found in~\cite{Bendavid:2017zhk}. Once a set of DNNs representing of definite integrals of the form of Eqn.~\ref{eqn:MEProb} to good approximation are generated, evaluation of the ME method calculations via the DNNs will be very fast. These DNNs can be throught of as preserving the essence of ME calculations in a way that allows for fast forward execution. The net result is that the DNNs can enable the ME method to be both \emph{nimble} and \emph{sustainable}, neither of which is true today.
-
+Applying neural networks to numerical integration problems is
+plausible but not new
+(see~\cite{CSEarticle2006,TICNC4344207,IJMC2013}, for example). The
+technical challenge is to design a network which is sufficiently rich
+to encode the complexity of the ME calculation for a given process
+over the phase space relevant to the signal process. Deep Neural
+Networks (DNNs) are stong candidates for networks with sufficient
+complexity to achieve good approximation of Eqn.~\ref{eqn:MEProb},
+possibly in conjunction with smart phase-space mapping such as
+described in~\cite{Artoisenet:2010cn}. Promising demonstration of the
+power of Boosted Decision Trees~\cite{friedman2000,friedman2001} and
+Generative Adversarial Neural Networks~\cite{GAN2014arXiv1406.2661G}
+for improved Monte Carlo integration can be found
+in~\cite{Bendavid:2017zhk}. Once a set of DNNs representing of
+definite integrals of the form of Eqn.~\ref{eqn:MEProb} to good
+approximation are generated, evaluation of the ME method calculations
+via the DNNs will be very fast. These DNNs can be throught of as
+preserving the essence of ME calculations in a way that allows for
+fast forward execution. The net result is that the DNNs can enable the
+ME method to be both \emph{nimble} and \emph{sustainable}, neither of
+which is true today.

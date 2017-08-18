@@ -1,7 +1,46 @@
-One drawback to the ME Method is that it has traditionally relied on LO matrix elements, although nothing in principle limits the ME method to LO calculations. Techniques that accomodate initial-state QCD radiation within the LO ME framework using transverse boosting and dedicated transfer functions to integrate over the transverse momentum of initial-state partons have been developed~\cite{Alwall:2010cq}. 
-Another challenge is development of the transfer functions which rely on tediously hand-crafted fits to full simulated Monte-Carlo events.
+One drawback to the ME Method is that it has traditionally relied on
+LO matrix elements, although nothing in principle limits the ME method
+to LO calculations. Techniques that accomodate initial-state QCD
+radiation within the LO ME framework using transverse boosting and
+dedicated transfer functions to integrate over the transverse momentum
+of initial-state partons have been developed~\cite{Alwall:2010cq}.
+Another challenge is development of the transfer functions which rely
+on tediously hand-crafted fits to full simulated Monte-Carlo events.
 
-The most serious difficulty in the ME method, and the one which has limited its applicability to searches for beyond-the-SM physics and precision measurements at collider experiments, is that it is very \emph{computationally intensive}. If this limitation could be overcome, then it would enable more widespread use of ME methods for analysis of LHC data. This could be particularly important for extending the new physics reach of the HL-LHC which will be dominated by increases in integrated luminosity rather than center-of-mass collision energy.
+The most serious difficulty in the ME method, and the one which has
+limited its applicability to searches for beyond-the-SM physics and
+precision measurements at collider experiments, is that it is
+very \emph{computationally intensive}. If this limitation could be
+overcome, then it would enable more widespread use of ME methods for
+analysis of LHC data. This could be particularly important for
+extending the new physics reach of the HL-LHC which will be dominated
+by increases in integrated luminosity rather than center-of-mass
+collision energy.
 
-Accurate evaluation of Eqn.~\ref{eqn:MEProb} is computationally challenging primarily for two reasons: (1) it involves high-dimensional integration over a large number of events, signal and background hypotheses, and systematic variations and (2) it involves sharply-peaked integrands\footnote{a consequence of imposing energy/momentum conservation in the processes} over a large domain in phase space. In reference to point (1), the matrix element $\mathcal{M}_{\xi}({\bf y}|\boldsymbol\alpha)$ in the method involves all partons in the $n\rightarrow m$ process, so when the 4-momentum of particles are not completely measured experimentally (e.g. neutrinos), one must integrate over the missing information which increases the dimensionality of the integration. In reference to point (2), a clever technique to re-map the phase space in order to reduce the sharpness of integrate in that space in an automated way ({\sf MADWEIGHT}~\cite{Artoisenet:2010cn}) is often used in conjunction with a matrix element calculation package ({\sf MADGRAPH\_aMC\@NLO}~\cite{Alwall:2014hca}). In practice, evaluation of definite integrals by the ME approach invokes techniques such as importance sampling (see {\sf VEGAS}~\cite{PETERLEPAGE1978192,Ohl:1998jn} and {\sf FOAM}~\cite{JADACH200355}) or recursive stratified sampling (see MISER~\cite{Press:1989vk}) Monte Carlo integration. Acceleration of some of these techniques on modern computing architectures has been achieved, for example concurrent phase space sampling in VEGAS on GPUs.
+Accurate evaluation of Eqn.~\ref{eqn:MEProb} is computationally
+challenging primarily for two reasons: (1) it involves
+high-dimensional integration over a large number of events, signal and
+background hypotheses, and systematic variations and (2) it involves
+sharply-peaked integrands\footnote{a consequence of imposing
+energy/momentum conservation in the processes} over a large domain in
+phase space. In reference to point (1), the matrix element
+$\mathcal{M}_{\xi}({\bf y}|\boldsymbol\alpha)$ in the method involves
+all partons in the $n\rightarrow m$ process, so when the 4-momentum of
+particles are not completely measured experimentally (e.g. neutrinos),
+one must integrate over the missing information which increases the
+dimensionality of the integration. In reference to point (2), a clever
+technique to re-map the phase space in order to reduce the sharpness
+of integrate in that space in an automated way ({\sf
+MADWEIGHT}~\cite{Artoisenet:2010cn}) is often used in conjunction with
+a matrix element calculation package ({\sf
+MADGRAPH\_aMC\@NLO}~\cite{Alwall:2014hca}). In practice, evaluation of
+definite integrals by the ME approach invokes techniques such as
+importance sampling (see {\sf
+VEGAS}~\cite{PETERLEPAGE1978192,Ohl:1998jn} and {\sf
+FOAM}~\cite{JADACH200355}) or recursive stratified sampling (see
+MISER~\cite{Press:1989vk}) Monte Carlo integration. Acceleration of
+some of these techniques on modern computing architectures has been
+achieved, for example concurrent phase space sampling in VEGAS on
+GPUs.
+
 
